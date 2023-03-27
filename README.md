@@ -61,7 +61,7 @@ let encoded = encoder.encode(text: "The GPT family of models process text using 
 
 ### Decode
 
-To decode an array of `Int` tokens back to the `String` you can simplyb invoke `decode` passing the tokens array.
+To decode an array of `Int` tokens back to the `String` you can invoke `decode` passing the tokens array.
 
 ```swift
 let decoded = encoder.decode(tokens: [464, 402, 11571, 1641, 286, 4981, 1429, 2420, 1262, 16326, 11, 543, 389, 2219, 16311, 286, 3435, 1043, 287, 2420, 13])
