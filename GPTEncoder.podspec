@@ -24,6 +24,12 @@ Pod::Spec.new do |s|
            'Sources/GPTEncoder/Resources/encoder.json'
         ]
     }
+    
+      
+    s.ios.deployment_target = "12.0"
+    s.osx.deployment_target = "10.13"
+    s.tvos.deployment_target = "12.0"
+    s.watchos.deployment_target = "7.0"
 
     s.requires_arc  = true
   end
