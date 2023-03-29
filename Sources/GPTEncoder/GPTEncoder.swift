@@ -57,7 +57,7 @@ public final class GPTEncoder {
     public func decode(tokens: [Int]) -> String {
         let text  = tokens.compactMap { token in decoder[token]}.joined(separator: "")
         let arrays = text.map { String($0) }.compactMap { byteDecoder[String($0)]}.map { UInt8($0) }
-        return decodeString(array: arrays);
+        return decodeString(array: arrays)
     }
     
     public func encode(text: String) -> [Int] {
