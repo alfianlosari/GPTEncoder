@@ -62,16 +62,5 @@ func encodeString(text: String) -> [UInt8] {
 }
 
 func decodeString(array: [UInt8], byteEncoder: [Int: String]) -> String {
-    var text = ""
-    /// Comparing char int to 32 and 194 is a temporary hack to handle invalid string for special alphabet  GÂ characters , need to find the actual fix
-    array.enumerated().forEach { i, v in
-        if v == 32 {
-            text += " "
-        } else if v == 194 {
-            text += ""
-        } else {
-            text +=  byteEncoder[Int(v)] ?? ""
-        }
-    }
-    return text
+    String(bytes: array, encoding: .isoLatin1) ?? ""
 }

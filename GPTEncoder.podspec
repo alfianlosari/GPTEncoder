@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name         = "GPTEncoder"
-    s.version      = "1.0.2"
+    s.version      = "1.0.3"
     s.summary      = "A programmatic interface for tokenizing text for OpenAI GPT API."
   
     s.description  = <<-DESC
