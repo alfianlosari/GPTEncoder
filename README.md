@@ -27,7 +27,7 @@ platform :ios, '15.0'
 use_frameworks!
 
 target 'MyApp' do
-  pod 'GPTEncoder', '~> 1.0.0'
+  pod 'GPTEncoder', '~> 1.0.1'
 end
 ```
 
