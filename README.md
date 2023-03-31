@@ -10,6 +10,10 @@ You can use the tool below to understand how a piece of text would be tokenized 
 
 This library is based on [nodeJS gpt-3-encoder](https://github.com/latitudegames/GPT-3-Encoder) and [OpenAI Official Python GPT Encoder/Decoder](https://github.com/openai/gpt-2) 
 
+I've also created [GPTTokenizerUI](https://github.com/alfianlosari/GPTTokenizerUI), a SPM lib you can integrate in your app for providing GUI to input text and show the tokenization results used by GPT API.
+
+![Alt text](https://imagizer.imageshack.com/v2/640x480q70/922/CEVvrE.png "image")
+
 ## Supported Platforms
 
 - iOS/macOS/watchOS/tvOS
