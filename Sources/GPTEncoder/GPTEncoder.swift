@@ -1,4 +1,9 @@
 import Foundation
+#if os(Linux)
+let bundle = Bundle.module
+#else
+let bundle = GPTEncoderResources.resourceBundle
+#endif
 
 public final class GPTEncoder {
     
@@ -9,13 +14,13 @@ public final class GPTEncoder {
     private let regex = try! NSRegularExpression(pattern: #"\'s|\'t|\'re|\'ve|\'m|\'ll|\'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+"#, options: .anchorsMatchLines)
     
     private let bpe: String = {
-        let fileURL = GPTEncoderResources.resourceBundle.url(forResource: "vocab", withExtension: "bpe")!
+        let fileURL = bundle.url(forResource: "vocab", withExtension: "bpe")!
         let bpe = try! Data(contentsOf: fileURL)
         return String(data: bpe, encoding: .utf8)!
     }()
     
     private let encoder: [String: Int] = {
-        let fileURL = GPTEncoderResources.resourceBundle.url(forResource: "encoder", withExtension: "json")!
+        let fileURL = bundle.url(forResource: "encoder", withExtension: "json")!
         let jsonEncoderData = try! Data(contentsOf: fileURL)
         return try! JSONSerialization.jsonObject(with: jsonEncoderData) as! [String: Int]
     }()
